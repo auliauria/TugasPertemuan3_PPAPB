@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ic_before"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_toStartOf="@id/txt_title"
+        android:src="@drawable/baseline_navigate_before"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:tint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/song_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/ic_more"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_more_vert"
+        android:layout_toEndOf="@id/txt_title"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20sp"
+        app:tint="@color/yellow" />
+    
+    <ImageView
+        android:id="@+id/cover_song"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/cover" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cover_song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:splitTrack="false"
+        android:layout_marginHorizontal="12dp"
+        android:thumb="@drawable/seekbar_thumb"
+        android:progressDrawable="@drawable/seekbar_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/seekbar"
+        android:text="@string/creator"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/orange" />
+
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/creator"
+        android:text="@string/song"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/yellow" />
+
+    <ImageView
+        android:id="@+id/skip_previous"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/song"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/baseline_skip_previous"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/play_circle"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/song"
+        android:layout_marginTop="53dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_play_circle"
+        app:tint="@color/orange" />
+
+    <ImageView
+        android:id="@+id/skip_next"
+        android:layout_width="57dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/song"
+        android:layout_toEndOf="@id/play_circle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/baseline_skip_next"
+        app:tint="@color/white" />
+
+
+</RelativeLayout>
